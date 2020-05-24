@@ -1,9 +1,10 @@
 /*
  * @Descripttion: 
  * @version: 0.1.0
- * @Author: wenhao.xu@hand-china.com
- * @Date: 2020-05-14 08:06:52
+ * @Author: wenhao.xu
+ * @Date: 2020-05-24 08:39:55
  */ 
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.tsx?$/,

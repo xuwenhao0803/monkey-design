@@ -1,10 +1,20 @@
 {
   "name": "monkey-design",
   "version": "0.1.0",
-  "private": true,
-  "main": "build/index.js",
-  "moudle": "build/index.js",
-  "types": "build/index.d.ts",
+  "description": "React components library",
+  "author": "wenhao.xu",
+  "private": false,
+  "main": "dist/index.js",
+  "moudle": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": ["Component","UI","React","hooks"],
+  "homepage": "https://github.com/xwh123456/monkey-design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xwh123456/monkey-design"
+  },
+  "files": ["dist"],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
@@ -32,14 +42,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "clean": "rimraf ./build",
+    "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
